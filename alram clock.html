@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alram Clock</title>
+    <link rel="stylesheet" href="./alaramclock.css">
+</head>
+
+<body>
+    <div class="con">
+        <h1>Clock</h1>
+        <div class="sam">
+            <div class="timec">
+                <h1 id="hourc"></h1>
+            </div>
+            <h1 class="dotc">:</h1>
+            <div class="timec">
+                <h1 id="minutec"></h1>
+            </div>
+            <h1 class="dotc">:</h1>
+            <div class="timec">
+                <h1 id="secondc"></h1>
+            </div>
+            <div class="timec">
+                <h1 id="ampmc"></h1>
+            </div>
+        </div>
+
+        <audio src="./Alarm Clock Alarm.mp3"></audio>
+        <div class="con">
+            <h1>SET ALARM</h1>
+            <div id="con2">
+                <div>
+                    <h2 style="display: inline; margin-right: 6%;">hour</h2>
+                    <h2 style="display: inline;margin-right: 14%;">minute</h2>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <input type="number" min="1" max="12" data-maxlength="2" id="hour" value="1">
+                    <h3 style="color: black;">:</h3>
+                    <input type="number" min="0" max="59" data-maxlength="2" id="minute" value="0">
+                    <select name="" id="ampm">
+                        <option value="Am">Am</option>
+                        <option value="Pm">Pm</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="button" value="Set Alarm" id="set">
+                </div>
+            </div>
+            <div id="con3" style="display: none; margin: 1%;">
+                <h2 id="disptimedif"></h2>
+                <input type="button" value="clear alram" id="clralr">
+            </div>
+        </div>
+    </div>
+    <script src="./alramclock.js"></script>
+</body>
+
+</html>
